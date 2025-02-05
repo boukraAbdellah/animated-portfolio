@@ -1,0 +1,148 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+
+  @include mobile {
+    padding: 1rem;
+  }
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 1.25rem;
+      color: gray;
+      text-align: right;
+
+      @include mobile {
+        text-align: left;
+        font-size: 1rem;
+      }
+    }
+
+    hr {
+      flex-grow: 1;
+      border: none;
+      border-top: 1px solid gray;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 2rem;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 2.5rem;
+        }
+      }
+
+      button {
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        background-color: orange;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(orange, 10%);
+        }
+
+        @include mobile {
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    @include mobile {
+      gap: 1rem;
+    }
+
+    .box {
+      flex: 1 1 300px;
+      border: 1px solid gray;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+      transition: transform 0.3s ease;
+
+      @include mobile {
+        flex-basis: 100%;
+        padding: 1.5rem;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      button {
+        padding: 0.75rem 1rem;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        font-weight: 700;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(orange, 10%);
+        }
+      }
+    }
+  }
+}
